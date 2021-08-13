@@ -1,0 +1,112 @@
+body {
+	margin: 0;
+	background: #333;
+}
+
+#title {
+	position: absolute;
+	width: 40%;
+	height: 10%;
+	top: 0;
+	left: 30%;
+	/*background: cornflowerblue;*/
+	color: white;
+	font-size: 40px;
+
+	/* 居中分布 */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#time {
+	position: absolute;
+	/* width: 30%; */
+	height: 10%;
+	right: 2%;
+	top: 3%;
+	/*left: 70%;*/
+    /*background: fuchsia;*/
+	color: #FFFFFF;
+	font-size: 25px;
+}
+
+#l1 {
+	position: absolute;
+	width: 30%;
+	height: 45%;
+	top: 10%;
+	left: 0;
+	/*background: blue;*/
+	background: #666666;
+}
+
+#l2 {
+	position: absolute;
+	width: 30%;
+	height: 45%;
+	top: 55%;
+	left: 0;
+	/*background: saddlebrown;*/
+	background: #777777;
+}
+#c1 {
+	position: absolute;
+	width: 40%;
+	height: 20%;
+	top: 10%;
+	left: 30%;
+	/* background: #777777; */
+}
+
+.num {
+	width: 25%;
+	float: left;
+
+	/* 居中分布 */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: gold;
+	font-size: 20px;
+}
+.text {
+	width: 25%;
+	float: left;
+	font-family: "幼圆";
+	font-size: 20px;
+	color: white;
+
+	/* 居中分布 */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#c2 {
+	position: absolute;
+	width: 40%;
+	height: 70%;
+	top: 30%;
+	left: 30%;
+	background: #888888;
+	/*background: aqua;*/
+}
+
+#r1 {
+	position: absolute;
+	width: 30%;
+	height: 45%;
+	top: 10%;
+	right: 0;
+	background: #666666;
+}
+
+#r2 {
+	position: absolute;
+	width: 30%;
+	height: 45%;
+	top: 55%;
+	right: 0;
+	background: #777777;
+}

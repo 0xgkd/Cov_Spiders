@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>欢迎使用COVID-19数据可视化平台</title>
+        <link href="../static/css/index.css" type="text/css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div id="background">
+            <div class="title"><h1><strong>欢迎使用COVID-19数据可视化平台</strong></h1></div>
+            <div class="text1"><h2>数据来源：</h2></div>
+            <div class="text2">
+                <h3>
+                    <a href="https://news.qq.com/zt2020/page/feiyan.htm#/">1、腾讯新闻——疫情实时追踪：</a>
+                    https://news.qq.com/zt2020/page/feiyan.htm#/
+                </h3>
+            </div>
+            <div class="text3">
+                <h3>
+                    <a href="https://voice.baidu.com/act/newpneumonia/newpneumonia?fraz=partner&paaz=gjyj">
+                        2、百度——疫情实时大数据报告：
+                    </a><br>
+                    https://voice.baidu.com/act/newpneumonia/newpneumonia?fraz=partner&paaz=gjyj
+                </h3>
+            </div>
+            <div class="text4">
+                <h3>
+                    <a href="https://ncov.dxy.cn/ncovh5/view/pneumonia">3、丁香园——疫情实时动态：</a><br>
+                    https://ncov.dxy.cn/ncovh5/view/pneumonia
+                </h3>
+            </div>
+            <div class="copyright">
+                <p>
+                    <strong>
+                        Copyright © 2021 COVID-19 Data Visualization Platform. All Rights Reserved by xxxx ######
+                    </strong>
+                </p>
+            </div>
+        </div>
+        <div id="project">
+            <div class="text5">
+                {% if username %}
+                    <h3><a href="{{ url_for('logout') }}" class="right">注销</a></h3>
+                {% else %}
+                    <h3><a href="{{ url_for('login') }}" class="right">登录</a></h3>
+                {% endif %}
+            </div>
+            <div class="url123">
+                <h3>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;导航栏</h3>
+                <a href="http://bmfw.www.gov.cn/yqfxdjcx/index.html">疫情风险等级查询</a>&emsp;&emsp;
+                <a href="https://gjzwfw.www.gov.cn/fwmh/healthCode/indexNucleic.do">核酸检测机构查询</a>&emsp;&emsp;
+                <a href="https://www.piyao.org.cn/2020yqpy/">疫情防控辟谣</a>
+            </div>
+            <div class="header">
+                <h3>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Welcome！</h3>
+                {% if username %}
+                    <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{{username}}, nice to meet you!</p>
+                {% else %}
+                    <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Nice to meet you!</p>
+                {% endif %}
+            </div>
+            <div class="text6">
+                <h3>项目背景</h3>
+                <p>
+                    &emsp;&emsp;庚子年春，一场突如其来的新型冠状病毒疫情打破了我们宁静如水的生活，居家隔离成为了我们日常生活中的主旋律。
+                    面对来势汹汹的未知疫情，党和国家没有自乱阵脚，而是采取了一系列措施，与病魔抗争到底，展现了我党决策的正确性，体现了我人民高度的执行力。
+                    80多岁高龄的钟南山院士抱着“苟利国家生死以，岂因祸福避趋之”的决心与魄力，毅然决然地领导抗疫小组奔赴武汉抗疫最前线，
+                    取得了诸多对抗击疫情有重大利好的研究成果，体现了我国在医学领域的硬实力。</p>
+                <p>
+                    &emsp;&emsp;因此，为了全局掌控疫情的形势以及便于实现新冠肺炎密切接触者的排查监控，需要对疫情的情况进行统计归类以及分析，
+                    从而为党和国家以及医务工作人员的工作安排提供决策数据，最终成功解决掉新冠病毒对人民群众身体健康的威胁，实现经济的平稳复苏。
+                </p>
+
+            </div>
+        </div>
+    </body>
+</html>

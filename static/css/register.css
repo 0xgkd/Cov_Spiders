@@ -1,0 +1,17 @@
+#navbar {
+    position: absolute;
+	width: 100%;
+	height: 10%;
+	top: 0;
+	left: 0;
+    background: url("../picture/a.jpg");
+}
+
+#container {
+    position: absolute;
+	width: 100%;
+	height: 90%;
+	top: 10%;
+	left: 0;
+    background: url("../picture/a.jpg");
+}

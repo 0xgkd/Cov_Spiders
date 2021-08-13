@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>欢迎注册</title>
+        <link href="../static/css/register.css" type="text/css" rel="stylesheet"/>
+        <script src="../static/js/jquery-3.5.1.min.js"></script>
+    </head>
+    <body>
+        <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+        <div id="navbar">
+            <strong><h1><a href="{{ url_for('index') }}">首页</a></h1></strong>
+        </div>
+
+        <div id="container">
+            {% for message in get_flashed_messages() %}
+                <div class="alert alert-warning">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+            {{ message }}
+                </div>
+            {% endfor %}
+            <h3>欢迎注册</h3>
+            <form method="post" action="/register">
+                <div class="form-group">
+                    <label for="usr">用户名:</label>
+                    <input type="text" class="form-control" id="usr" name="username" placeholder="请输入用户名">
+                </div>
+                <div class="form-group">
+                    <label for="pwd">密码:</label>
+                    <input type="password" class="form-control" id="pwd" name="password" placeholder="请输入密码">
+                </div>
+                <div class="form-group">
+                    <label for="email">邮箱:</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="请输入邮箱">
+                    <input type="button" id="send" value="发送验证码">
+                </div>
+                <div class="form-group">
+                    <label for="code">邮箱验证码:</label>
+                    <input type="text" class="form-control" id="code" name="code" placeholder="请输入六位邮箱验证码">
+                </div>
+                <button type="submit" class="btn btn-primary">注册</button>
+            </form>
+        </div>
+            {% if error %}
+                <p>{{error}}</p>
+            {% endif %}
+        <script src="../static/js/code.js"></script>>
+    </body>
+</html>
